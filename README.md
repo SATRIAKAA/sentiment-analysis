@@ -43,9 +43,10 @@ Dataset harus berupa CSV dan memiliki setidaknya dua kolom:
 2. **Kolom sentimen**: label kelas untuk teks pada baris tersebut.
 
 Nama kolom bebas. Pilih keduanya pada bagian **Pilih atribut dataset** di
-sidebar. Jika belum mengunggah CSV, aplikasi menggunakan
-[`data/raw/dataset.csv`](data/raw/dataset.csv), yang memiliki kolom `reviews`
-dan `label`.
+sidebar. Dataset contoh lokal memiliki kolom `reviews` dan `label`. Dataset
+tidak disertakan di repository GitHub; saat menjalankan clone baru, unggah CSV
+Anda melalui sidebar. Jika berkas lokal `data/raw/dataset.csv` tersedia dan
+tidak ada CSV yang diunggah, aplikasi menggunakan berkas tersebut.
 
 ### Label yang didukung
 
@@ -253,6 +254,11 @@ Daftar dependensi lengkap ada di [`requirements.txt`](requirements.txt).
 Pastikan CSV memiliki header. Pilih kolom teks dan label yang benar dari sidebar;
 nama kolom tidak harus `reviews` atau `label`.
 
+### Aplikasi meminta dataset saat pertama dijalankan
+
+Dataset ulasan tidak disertakan di repository. Unggah file CSV Anda melalui
+sidebar sebelum menjalankan analisis.
+
 ### Label ditolak
 
 Pastikan target berisi tepat dua atau tiga kelas yang didukung. Untuk label teks,
@@ -273,6 +279,3 @@ Hentikan server dengan `Ctrl+C`, lalu jalankan lagi:
 ```powershell
 python -m streamlit run main.py
 ```
-#   s e n t i m e n t - a n a l y s i s 
- 
- 
